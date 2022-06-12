@@ -8,7 +8,7 @@ var b = 2;  //(c) constant time taken by the statement
 
 var c = a + b;  // c (addition) + c (assignment) => 2c
 
-//total time taken by the code to execute or complete is (c+c+c+2c) => 4C
+//total time taken by the code to execute or complete is (c+c+2c) => 4C
 
 var arr = [] // time complexity (c) constant time
 
@@ -22,9 +22,20 @@ let even_count = 0 //c
 for (let i = 0; i < arr.length; i++) {
     if (arr[i] % 2 == 0) {  //c
         even_count++  //2c
+        let h = 23; // c
+        let i = 23;  // c
+        let sum = h + i; // 2c
     }
 }
+
+
+// total = c + loop(c + 2c + c + c + 2c) 
+
 //total time complexity => c + loop(c + 2c) => c + loop(3c) => c + no. of time loop runs(in our case arr.length) * 3c => c + 8 * 3c => 25c
 
 //array size of n => c + n*2c => c + 2nc => c(2n + 1)
 console.log(even_count)
+
+var x = 3; // one constaint time (c)
+var y = 4; // one constaint time (c)
+var z = x + y;  // two constaint time(2c)
